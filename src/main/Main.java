@@ -17,20 +17,20 @@ public class Main {
 		Hostess ht;
 		Pilot pl;
 		
-		//Criaçao
+		//CriaÃ§ao
 		for (int passengers = 0; passengers < Constants.nPassengers; passengers++){
 			pg[passengers] = new Passenger(passengers, airport, plane, destination, repo);
 		}
 		ht = new Hostess("Hospedeira", airport, plane, repo);
 		pl = new Pilot("Piloto",destination, plane, airport, repo);
 		
-		//Inicializaçao
+		//Inicializaao
 		for (int passengers = 0; passengers < Constants.nPassengers; passengers++)
 			pg[passengers].start();
 		ht.start();
 		pl.start();
 		
-		//Execuçao
+		//ExecuÃ§ao
 		for (int passengers = 0; passengers < Constants.nPassengers; passengers++) {
 			try {
 				pg[passengers].join();

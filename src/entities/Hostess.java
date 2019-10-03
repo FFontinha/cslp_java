@@ -8,11 +8,11 @@ import sharedRegions.Repository;
 
 /**
  *	Este tipo de dados implementa o thread Hostess.<p>
- *  O ciclo de vida da hostess é o seguinte:
- *     <li> Ño principio ela espera pelo proximo voo;
+ *  O ciclo de vida da hostess ï¿½ o seguinte:
+ *     <li> ï¿½o principio ela espera pelo proximo voo;
  *     <li> Depois espera que um passageiro entre na fila para o aviao e faz check ao passaporte;
  *     <li> Apos certas condicoes, ela informa que ao aviao vai descolar;
- *     <li> Isto tudo enquanto o numero de passageiros no destino é menor ao numero total de passageiros.
+ *     <li> Isto tudo enquanto o numero de passageiros no destino ï¿½ menor ao numero total de passageiros.
  */
 public class Hostess extends Thread {
 
@@ -23,7 +23,8 @@ public class Hostess extends Thread {
 	private Plane plane;
 	private int passID;
 	private int nPass;
-	
+
+
 	public Hostess(String name, Airport airport, Plane plane, Repository repo){
 		this.name = name;
 		this.airport = airport;
