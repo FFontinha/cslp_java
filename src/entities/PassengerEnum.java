@@ -3,10 +3,10 @@ package entities;
 /**
  * Estados da thread Passenger
  * 
- *		<li> Go to airport;
- *		<li> In queue;
- *		<li> In flight;
- *		<li> At destination.
+ *		<br> Go to airport;
+ *		<br> In queue;
+ *		<br> In flight;
+ *		<br> At destination.
  */
 public enum PassengerEnum {
 	GTAP,

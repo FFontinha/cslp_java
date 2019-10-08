@@ -28,7 +28,10 @@ public class Airport {
 		this.fifo = new FIFOGen(Constants.nPassengers);
 		this.repo = repo;
 	}
-	
+
+	/**
+	 *  Passageiro: Esperar na fila
+	 */
 	public synchronized void waitInQueue(){				//Passenger
 		Passenger pg = (Passenger) Thread.currentThread();
 		pg.setPassengerState(PassengerEnum.INQE);
@@ -39,7 +42,10 @@ public class Airport {
 		repo.setPassengerState(pg.getPassengerID(), pg.getPassengerState());
 		notifyAll();
 	}
-	
+
+	/**
+	 *  Hospedeira: ESperar pelo proximo voo
+	 */
 	public synchronized void waitForNextFlight(){		//Hostess
 		Hostess ht = (Hostess) Thread.currentThread();
 		ht.setHostessState(HostessEnum.WTFL);
@@ -51,7 +57,10 @@ public class Airport {
 		}
 		readyforboarding = false;
 	}
-	
+
+	/**
+	 *  Piloto: Aviao pronto para receber
+	 */
 	public synchronized void informPlaneReadyForBoarding(){	//Pilot
 		nFlight++;
 		repo.setnFlight(nFlight);
@@ -62,7 +71,10 @@ public class Airport {
 		readyforboarding = true;
 		notifyAll();
 	}
-	
+
+	/**
+	 *  Hospedeira: Esperar por passageiros
+	 */
 	public synchronized int waitForPassenger(){			//Hostess
 		Hostess ht = (Hostess) Thread.currentThread();
 		ht.setHostessState(HostessEnum.WFPS);
@@ -78,7 +90,10 @@ public class Airport {
 		id = (int) fifo.out();
 		return id;
 	}
-	
+
+	/**
+	 *  Hospedeira: Verificar passaporte
+	 */
 	public synchronized void checkPassport(int passID){			//Hostess
 		Hostess ht = (Hostess) Thread.currentThread();
 		ht.setHostessState(HostessEnum.CKPS);
@@ -99,7 +114,10 @@ public class Airport {
 		id=passID;
 		notifyAll();
 	}
-	
+
+	/**
+	 *  Passageiro: Mostrar documentos
+	 */
 	public synchronized void showDocuments(int nPass){				//Passenger
 		while(nPass!=id){
 			try {
@@ -110,6 +128,9 @@ public class Airport {
 		notifyAll();
 	}
 
+	/**
+	 *  Numero de passageiros aceites
+	 */
 	public int getNumbOfCheckedPass() {
 		return NumbOfChecked;
 	}

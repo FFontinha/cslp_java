@@ -9,10 +9,10 @@ import sharedRegions.Repository;
 /**
  *	Este tipo de dados implementa o thread Hostess.<p>
  *  O ciclo de vida da hostess � o seguinte:
- *     <li> �o principio ela espera pelo proximo voo;
- *     <li> Depois espera que um passageiro entre na fila para o aviao e faz check ao passaporte;
- *     <li> Apos certas condicoes, ela informa que ao aviao vai descolar;
- *     <li> Isto tudo enquanto o numero de passageiros no destino � menor ao numero total de passageiros.
+ *     <br> No principio ela espera pelo proximo voo;
+ *     <br> Depois espera que um passageiro entre na fila para o aviao e faz check ao passaporte;
+ *     <br> Apos certas condicoes, ela informa que ao aviao vai descolar;
+ *     <br> Isto tudo enquanto o numero de passageiros no destino � menor ao numero total de passageiros.
  */
 public class Hostess extends Thread {
 

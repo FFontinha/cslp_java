@@ -18,9 +18,9 @@ public class Pilot extends Thread {
 	/**
 	 *	Este tipo de dados implementa o thread Pilot.<p>
 	 *  O ciclo de vida do passenger é  o seguinte:
-	 *     <li> Ele avisa que oaviao esta pronto para receber passageiros;
-	 *     <li> Espera que tenha passageiros suficientes e descola;
-	 *     <li> Aterra e deixa os passageiros e voa de volta;
+	 *     <br> Ele avisa que oaviao esta pronto para receber passageiros;
+	 *     <br> Espera que tenha passageiros suficientes e descola;
+	 *     <br> Aterra e deixa os passageiros e voa de volta;
 	 */
 	public Pilot(String name, Destination destination, Plane plane, Airport airport, Repository repo) {
 		this.name = name;
@@ -57,7 +57,6 @@ public class Pilot extends Thread {
 
 	/**
 	 * 	Operacao para receber o estado da thread
-	 * 		@param state Estado da thread Passenger
 	 */
 	public PilotEnum getPilotState() {
 		return state;

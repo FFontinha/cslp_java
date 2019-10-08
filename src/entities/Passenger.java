@@ -9,9 +9,9 @@ import sharedRegions.Repository;
 /**
  *	Este tipo de dados implementa o thread Passenger.<p>
  *  O ciclo de vida do passenger é  o seguinte:
- *     <li> Ele vai para o aeroporto numa altura aleatória;
- *     <li> Entra na fila para o aviao e quando for a sua vez mostra o passaporte;
- *     <li> Depois entra no aviao e espera que descole e a seguir aterre.;
+ *     <br> Ele vai para o aeroporto numa altura aleatória;
+ *     <br> Entra na fila para o aviao e quando for a sua vez mostra o passaporte;
+ *     <br> Depois entra no aviao e espera que descole e a seguir aterre.;
  */
 public class Passenger extends Thread {
 
@@ -61,7 +61,6 @@ public class Passenger extends Thread {
 
 	/**
 	 * 	Operacao para receber o ID da thread
-	 * 		@param id ID da thread Passenger
 	 */
 	public int getPassengerID(){
 		return ID;
@@ -77,7 +76,6 @@ public class Passenger extends Thread {
 
 	/**
 	 * 	Operacao para receber o estado da thread
-	 * 		@param state Estado da thread Passenger
 	 */
 	public PassengerEnum getPassengerState(){
 		return state;

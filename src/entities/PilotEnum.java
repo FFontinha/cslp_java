@@ -3,11 +3,11 @@ package entities;
 /**
  * Estados da thread Pilot
  * 
- *		<li> Flying back;
- *		<li> Ready for boarding;
- *		<li> Waiting for boarding;
- *		<li> Flying forward;
- *		<li> Dropping passengers.
+ *		<br> Flying back;
+ *		<br> Ready for boarding;
+ *		<br> Waiting for boarding;
+ *		<br> Flying forward;
+ *		<br> Dropping passengers.
  */
 public enum PilotEnum {
 	FLBK,

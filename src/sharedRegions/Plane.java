@@ -23,7 +23,10 @@ public class Plane {
 		nPassengersInFlight = new int[Constants.maxNumberFlights];
 		nPassengersBoarded = 0;
 	}
-	
+
+	/**
+	 *  Hospedeira: Informa que o aviao pode descolar
+	 */
 	public synchronized void informPlaneReadyToTakeOff(int nPassChecked){		//Hostess
 		Hostess ht = (Hostess) Thread.currentThread();
 		while(nPassengersBoarded!=ht.getPassengersInFlight()){
@@ -39,7 +42,10 @@ public class Plane {
 		readyToTakeOff = true;
 		notifyAll();
 	}
-	
+
+	/**
+	 *  Piloto: Deixar os passageiros no destino
+	 */
 	public synchronized void dropPassengers(){		//Pilot
 		Pilot pl = (Pilot) Thread.currentThread();
 		pl.setPilotState(PilotEnum.DRPP);
@@ -55,7 +61,10 @@ public class Plane {
 			} catch (InterruptedException e) {}
 		}
 	}
-	
+
+	/**
+	 *  Pilot: Voar para o destino
+	 */
 	public synchronized void flyToDestinationPoint(){		//Pilot
 		Pilot pl = (Pilot) Thread.currentThread();
 		pl.setPilotState(PilotEnum.FLFW);
@@ -66,6 +75,9 @@ public class Plane {
 	       catch (InterruptedException e) {}
 	}
 
+	/**
+	 *  Piloto: Esperar até o aviao estar pronto
+	 */
 	public synchronized void waitForAllInBoard() {			//Pilot
 		Pilot pl = (Pilot) Thread.currentThread();
 		pl.setPilotState(PilotEnum.WTFB);
@@ -79,6 +91,9 @@ public class Plane {
 		notifyAll();
 	}
 
+	/**
+	 *  Piloto: Voar de volta
+	 */
 	public synchronized void flyDeparturePoint() {			//Pilot
 		Pilot pl = (Pilot) Thread.currentThread();
 		pl.setPilotState(PilotEnum.FLBK);
@@ -91,6 +106,9 @@ public class Plane {
 	       catch (InterruptedException e) {}
 	}
 
+	/**
+	 *  Passageiro: Entrar no aviao
+	 */
 	public synchronized void boardThePlane() {				//Passenger
 		Passenger pg = (Passenger) Thread.currentThread();
 		pg.setPassengerState(PassengerEnum.INFL);
@@ -103,6 +121,9 @@ public class Plane {
 		notifyAll();
 	}
 
+	/**
+	 *  Passageiro: Esperar que o aviao chegue ao destino
+	 */
 	public synchronized void waitForEndOfFlight() {			//Passenger
 		while(!atDestination){
 			try {
@@ -110,7 +131,10 @@ public class Plane {
 			} catch (InterruptedException e) {}
 		}
 	}
-	
+
+	/**
+	 *  Passageiro: Avisar que o aviao está vazio
+	 */
 	public synchronized void alertPilotplaneIsEmpty(){		//Passenger
 		isEmpty=true;
 		atDestination=false;

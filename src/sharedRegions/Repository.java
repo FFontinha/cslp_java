@@ -44,7 +44,10 @@ public class Repository {
 	        System.exit (1);
 	    }
 	}
-	       
+
+	/**
+	 *  Guardar estado
+	 */
     private synchronized void SaveState(){
 		String string = String.format("%4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s %4s  %2d  %2d  %2d",plState ,htState,pgState[0],pgState[1],pgState[2],pgState[3],pgState[4],pgState[5],pgState[6],pgState[7],pgState[8],pgState[9],pgState[10],pgState[11],pgState[12],pgState[13],pgState[14],pgState[15],pgState[16],pgState[17],pgState[18],pgState[19],pgState[20],nPassengersInQueue,nPassengersInFlight[nFlight], nPassengersAtDestination);		
 		if (!log.openForAppending (".", fileName)){
@@ -57,7 +60,10 @@ public class Repository {
 	        System.exit (1);
 	    }
 	}
-    
+
+	/**
+	 *  Confirmar estado
+	 */
     public synchronized void SaveCheck(int passID, int flight){
     	String string = "\nFlight "+flight+": passenger "+passID+" checked.";
 		if (!log.openForAppending (".", fileName)){
@@ -70,7 +76,10 @@ public class Repository {
 	        System.exit (1);
 	    }
     }
-    
+
+	/**
+	 *  Guardar estado Boarding
+	 */
     public synchronized void SaveBoarding(int flight){
     	String string = "\nFlight "+flight+": boarding started.";
 		if (!log.openForAppending (".", fileName)){
@@ -83,7 +92,10 @@ public class Repository {
 	        System.exit (1);
 	    }
     }
-    
+
+	/**
+	 *  Guardar estado Arrival
+	 */
     public synchronized void SaveArrival(int flight){
     	String string = "\nFlight "+flight+": arrived.";
 		if (!log.openForAppending (".", fileName)){
@@ -96,7 +108,10 @@ public class Repository {
 	        System.exit (1);
 	    }
     }
-    
+
+	/**
+	 *  Guardar estado Departure
+	 */
     public synchronized void SaveDeparture(int flight, int nPass ){
     	nPassengersPerFlight[flight]=nPass;
     	String string = "\nFlight "+flight+": departed with "+nPass+" passengers.";
@@ -110,7 +125,10 @@ public class Repository {
 	        System.exit (1);
 	    }
     }
-    
+
+	/**
+	 *  Guardar estado Return
+	 */
     public synchronized void SaveReturn(int flight){
     	String string = "\nFlight "+flight+": returning.";
 		if (!log.openForAppending (".", fileName)){
@@ -123,7 +141,10 @@ public class Repository {
 	        System.exit (1);
 	    }
     }
-   
+
+	/**
+	 *  Sumario do voo
+	 */
     public synchronized void sumUpResults(){
 		if (!log.openForAppending (".", fileName)){
 			GenericIO.writelnString ("A opera��o de cria��o do ficheiro " + fileName + " falhou!");

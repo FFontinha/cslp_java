@@ -14,7 +14,10 @@ public class Destination {
 		this.plane = plane;
 		nTransportedPass = 0;
 	}
-	
+
+	/**
+	 *  Passageiro: Sair do aviao
+	 */
 	public synchronized void leavePlane(){			//Passenger
 		Passenger pg = (Passenger) Thread.currentThread();
 		pg.setPassengerState(PassengerEnum.ATDS);
@@ -30,7 +33,7 @@ public class Destination {
 		}
 		notifyAll();	
 	}
-	
+
 	public int getNumbOfTransportedPass(){			//Pilot
 		return nTransportedPass;
 	}
