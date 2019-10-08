@@ -1,0 +1,78 @@
+\hypertarget{class_structures_1_1_f_i_f_o_gen}{}\section{Structures.\+F\+I\+F\+O\+Gen Class Reference}
+\label{class_structures_1_1_f_i_f_o_gen}\index{Structures.\+F\+I\+F\+O\+Gen@{Structures.\+F\+I\+F\+O\+Gen}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_structures_1_1_f_i_f_o_gen_a79132f0c7d3fbecef239a1e6988381a7}{F\+I\+F\+O\+Gen} (int n\+Elem)
+\item 
+void \hyperlink{class_structures_1_1_f_i_f_o_gen_a8ec114330d8c542df57d58886ecb2196}{in} (Object val)
+\item 
+Object \hyperlink{class_structures_1_1_f_i_f_o_gen_ac21638f2f22f36450c241d5f5dc665bb}{out} ()
+\item 
+boolean \hyperlink{class_structures_1_1_f_i_f_o_gen_a55ae00dc84a01ec42237fa0ea8a088c5}{is\+Empty} ()
+\item 
+String \hyperlink{class_structures_1_1_f_i_f_o_gen_a89179a1589f53d69033309e302df2d4e}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic F\+I\+FO. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_structures_1_1_f_i_f_o_gen_a79132f0c7d3fbecef239a1e6988381a7}\label{class_structures_1_1_f_i_f_o_gen_a79132f0c7d3fbecef239a1e6988381a7}} 
+\index{Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}!F\+I\+F\+O\+Gen@{F\+I\+F\+O\+Gen}}
+\index{F\+I\+F\+O\+Gen@{F\+I\+F\+O\+Gen}!Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}}
+\subsubsection{\texorpdfstring{F\+I\+F\+O\+Gen()}{FIFOGen()}}
+{\footnotesize\ttfamily Structures.\+F\+I\+F\+O\+Gen.\+F\+I\+F\+O\+Gen (\begin{DoxyParamCaption}\item[{int}]{n\+Elem }\end{DoxyParamCaption})}
+
+F\+I\+FO instantiation. The instantiation only takes place if the F\+I\+FO size is meaningful (greater than zero). No error is reported.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Elem} & F\+I\+FO size \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_structures_1_1_f_i_f_o_gen_a8ec114330d8c542df57d58886ecb2196}\label{class_structures_1_1_f_i_f_o_gen_a8ec114330d8c542df57d58886ecb2196}} 
+\index{Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}!in@{in}}
+\index{in@{in}!Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}}
+\subsubsection{\texorpdfstring{in()}{in()}}
+{\footnotesize\ttfamily void Structures.\+F\+I\+F\+O\+Gen.\+in (\begin{DoxyParamCaption}\item[{Object}]{val }\end{DoxyParamCaption})}
+
+F\+I\+FO insertion. A generic object is written into it. If the F\+I\+FO is full, nothing happens. No error is reported.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & generic object to be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_structures_1_1_f_i_f_o_gen_a55ae00dc84a01ec42237fa0ea8a088c5}\label{class_structures_1_1_f_i_f_o_gen_a55ae00dc84a01ec42237fa0ea8a088c5}} 
+\index{Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily boolean Structures.\+F\+I\+F\+O\+Gen.\+is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_structures_1_1_f_i_f_o_gen_ac21638f2f22f36450c241d5f5dc665bb}\label{class_structures_1_1_f_i_f_o_gen_ac21638f2f22f36450c241d5f5dc665bb}} 
+\index{Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}!out@{out}}
+\index{out@{out}!Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}}
+\subsubsection{\texorpdfstring{out()}{out()}}
+{\footnotesize\ttfamily Object Structures.\+F\+I\+F\+O\+Gen.\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+F\+I\+FO retrieval. A generic object is read from it. If the F\+I\+FO is empty, {\ttfamily null} is returned. No error is reported.
+
+\begin{DoxyReturn}{Returns}
+first generic object that was written 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_structures_1_1_f_i_f_o_gen_a89179a1589f53d69033309e302df2d4e}\label{class_structures_1_1_f_i_f_o_gen_a89179a1589f53d69033309e302df2d4e}} 
+\index{Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Structures\+::\+F\+I\+F\+O\+Gen@{Structures\+::\+F\+I\+F\+O\+Gen}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String Structures.\+F\+I\+F\+O\+Gen.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Structures/\hyperlink{_f_i_f_o_gen_8java}{F\+I\+F\+O\+Gen.\+java}\end{DoxyCompactItemize}

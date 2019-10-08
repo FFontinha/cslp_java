@@ -1,0 +1,76 @@
+\hypertarget{classentities_1_1_hostess}{}\section{entities.\+Hostess Class Reference}
+\label{classentities_1_1_hostess}\index{entities.\+Hostess@{entities.\+Hostess}}
+
+
+Inherits Thread.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classentities_1_1_hostess_af5fd5cb79ab98e980c15cd09d3576801}{Hostess} (String name, \hyperlink{classshared_regions_1_1_airport}{Airport} airport, \hyperlink{classshared_regions_1_1_plane}{Plane} plane, \hyperlink{classshared_regions_1_1_repository}{Repository} repo)
+\item 
+void \hyperlink{classentities_1_1_hostess_a509c1f1c96b0a760860884592c7babd8}{run} ()
+\item 
+void \hyperlink{classentities_1_1_hostess_ade5532fba6e9d58853c575ded4006507}{set\+Hostess\+State} (\hyperlink{enumentities_1_1_hostess_enum}{Hostess\+Enum} state)
+\item 
+int \hyperlink{classentities_1_1_hostess_af9d14239c4536df5a3975700d4c853fb}{get\+Passengers\+In\+Flight} ()
+\item 
+\hyperlink{enumentities_1_1_hostess_enum}{Hostess\+Enum} \hyperlink{classentities_1_1_hostess_acee3f8042f80e5252e6ed73255117d4e}{get\+Hostess\+State} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Este tipo de dados implementa o thread \hyperlink{classentities_1_1_hostess}{Hostess}.
+
+O ciclo de vida da hostess � o seguinte\+:  �o principio ela espera pelo proximo voo;  Depois espera que um passageiro entre na fila para o aviao e faz check ao passaporte;  Apos certas condicoes, ela informa que ao aviao vai descolar;  Isto tudo enquanto o numero de passageiros no destino � menor ao numero total de passageiros. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentities_1_1_hostess_af5fd5cb79ab98e980c15cd09d3576801}\label{classentities_1_1_hostess_af5fd5cb79ab98e980c15cd09d3576801}} 
+\index{entities\+::\+Hostess@{entities\+::\+Hostess}!Hostess@{Hostess}}
+\index{Hostess@{Hostess}!entities\+::\+Hostess@{entities\+::\+Hostess}}
+\subsubsection{\texorpdfstring{Hostess()}{Hostess()}}
+{\footnotesize\ttfamily entities.\+Hostess.\+Hostess (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{\hyperlink{classshared_regions_1_1_airport}{Airport}}]{airport,  }\item[{\hyperlink{classshared_regions_1_1_plane}{Plane}}]{plane,  }\item[{\hyperlink{classshared_regions_1_1_repository}{Repository}}]{repo }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classentities_1_1_hostess_acee3f8042f80e5252e6ed73255117d4e}\label{classentities_1_1_hostess_acee3f8042f80e5252e6ed73255117d4e}} 
+\index{entities\+::\+Hostess@{entities\+::\+Hostess}!get\+Hostess\+State@{get\+Hostess\+State}}
+\index{get\+Hostess\+State@{get\+Hostess\+State}!entities\+::\+Hostess@{entities\+::\+Hostess}}
+\subsubsection{\texorpdfstring{get\+Hostess\+State()}{getHostessState()}}
+{\footnotesize\ttfamily \hyperlink{enumentities_1_1_hostess_enum}{Hostess\+Enum} entities.\+Hostess.\+get\+Hostess\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Operacao para retornar o estado da thread \begin{DoxyReturn}{Returns}
+state Estado da thread \hyperlink{classentities_1_1_hostess}{Hostess} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classentities_1_1_hostess_af9d14239c4536df5a3975700d4c853fb}\label{classentities_1_1_hostess_af9d14239c4536df5a3975700d4c853fb}} 
+\index{entities\+::\+Hostess@{entities\+::\+Hostess}!get\+Passengers\+In\+Flight@{get\+Passengers\+In\+Flight}}
+\index{get\+Passengers\+In\+Flight@{get\+Passengers\+In\+Flight}!entities\+::\+Hostess@{entities\+::\+Hostess}}
+\subsubsection{\texorpdfstring{get\+Passengers\+In\+Flight()}{getPassengersInFlight()}}
+{\footnotesize\ttfamily int entities.\+Hostess.\+get\+Passengers\+In\+Flight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Operacao para retornar o numero de passageiros no voo \begin{DoxyReturn}{Returns}
+n\+Pass Numero de passageiros no voo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classentities_1_1_hostess_a509c1f1c96b0a760860884592c7babd8}\label{classentities_1_1_hostess_a509c1f1c96b0a760860884592c7babd8}} 
+\index{entities\+::\+Hostess@{entities\+::\+Hostess}!run@{run}}
+\index{run@{run}!entities\+::\+Hostess@{entities\+::\+Hostess}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void entities.\+Hostess.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ciclo de vida da thread \hyperlink{classentities_1_1_hostess}{Hostess}. \mbox{\Hypertarget{classentities_1_1_hostess_ade5532fba6e9d58853c575ded4006507}\label{classentities_1_1_hostess_ade5532fba6e9d58853c575ded4006507}} 
+\index{entities\+::\+Hostess@{entities\+::\+Hostess}!set\+Hostess\+State@{set\+Hostess\+State}}
+\index{set\+Hostess\+State@{set\+Hostess\+State}!entities\+::\+Hostess@{entities\+::\+Hostess}}
+\subsubsection{\texorpdfstring{set\+Hostess\+State()}{setHostessState()}}
+{\footnotesize\ttfamily void entities.\+Hostess.\+set\+Hostess\+State (\begin{DoxyParamCaption}\item[{\hyperlink{enumentities_1_1_hostess_enum}{Hostess\+Enum}}]{state }\end{DoxyParamCaption})}
+
+Operacao para mudar o estado da thread 
+\begin{DoxyParams}{Parameters}
+{\em state} & Estado da thread \hyperlink{classentities_1_1_hostess}{Hostess} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+entities/\hyperlink{_hostess_8java}{Hostess.\+java}\end{DoxyCompactItemize}

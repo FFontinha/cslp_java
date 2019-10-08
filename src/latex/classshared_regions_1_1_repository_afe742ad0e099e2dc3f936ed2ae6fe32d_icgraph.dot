@@ -1,0 +1,23 @@
+digraph "sharedRegions.Repository.setPilotState"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node70 [label="sharedRegions.Repository.set\lPilotState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node70 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node71 [label="sharedRegions.Airport.inform\lPlaneReadyForBoarding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshared_regions_1_1_airport.html#a07a8dabf9bd3f1d90ef4b9f8fa26d732"];
+  Node71 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node72 [label="entities.Pilot.run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classentities_1_1_pilot.html#aa0a1f2dd8931f01b03cdc2aa9e99acaf"];
+  Node70 -> Node73 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node73 [label="sharedRegions.Plane.drop\lPassengers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshared_regions_1_1_plane.html#a2a149380a2b96b06d85d84b4b7490068"];
+  Node73 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node70 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node74 [label="sharedRegions.Plane.flyTo\lDestinationPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshared_regions_1_1_plane.html#a14092728e37c693cce80f31c0096e467"];
+  Node74 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node70 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node75 [label="sharedRegions.Plane.wait\lForAllInBoard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshared_regions_1_1_plane.html#a8520969010cb85cbff07deb3f1a0f003"];
+  Node75 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node70 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node76 [label="sharedRegions.Plane.flyDeparture\lPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshared_regions_1_1_plane.html#aa6a53f1bb5882641937018e78100272f"];
+  Node76 -> Node72 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}
